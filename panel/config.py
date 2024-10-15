@@ -671,6 +671,7 @@ class panel_extension(_pyviz_extension):
         'tabulator': 'panel.models.tabulator',
         'terminal': 'panel.models.terminal',
         'texteditor': 'panel.models.quill',
+        'threejs': 'panel.models.threejs',
         'vizzu': 'panel.models.vizzu',
         'vega': 'panel.models.vega',
         'vtk': 'panel.models.vtk'
@@ -690,6 +691,7 @@ class panel_extension(_pyviz_extension):
         'perspective': ["customElements.get('perspective-viewer')"],
         'plotly': ['Plotly'],
         'tabulator': ['Tabulator'],
+        'threejs': ['threejs'],
         'terminal': ['Terminal', 'xtermjs'],
         'vega': ['vega'],
         'vizzu': ['Vizzu'],

@@ -51,6 +51,7 @@ from .plot import (  # noqa
 from .plotly import Plotly  # noqa
 from .streamz import Streamz  # noqa
 from .textual import Textual  # noqa
+from .threejs import ThreeJS
 from .vega import Vega  # noqa
 from .vizzu import Vizzu  # noqa
 from .vtk import VTK, VTKVolume  # noqa
@@ -95,6 +96,7 @@ __all__ = (
     "Str",
     "Streamz",
     "SVG",
+    "ThreeJSPlot"
     "Textual",
     "Vega",
     "Video",
