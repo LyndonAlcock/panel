@@ -1,4 +1,5 @@
 from bokeh.core.properties import Int, String
+
 from .layout import HTMLBox
 
 class ChartJS(HTMLBox):

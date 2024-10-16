@@ -1,5 +1,6 @@
 // See https://docs.bokeh.org/en/latest/docs/reference/models/layouts.html
 import { HTMLBox, HTMLBoxView } from "./layout"
+import {div} from "@bokehjs/core/dom"
 
 // See https://docs.bokeh.org/en/latest/docs/reference/core/properties.html
 import * as p from "@bokehjs/core/properties"
@@ -8,6 +9,7 @@ import * as p from "@bokehjs/core/properties"
 // Here you can define how to render the model as well as react to model changes or View events.
 export class ChartJSView extends HTMLBoxView {
     declare model: ChartJS
+    container: Element
     objectElement: any // Element
 
     override connect_signals(): void {
@@ -20,10 +22,11 @@ export class ChartJSView extends HTMLBoxView {
 
     override render(): void {
         super.render()
-        this.el.innerHTML = `<button type="button">${this.model.object}</button>`
-        this.objectElement = this.el.firstElementChild
-
+        this.container = div({style: {height: "100%", width: "100%"}})
+        this.container.innerHTML = `<button type="button">${this.model.object}</button>`
+        this.objectElement = this.container.firstElementChild
         this.objectElement.addEventListener("click", () => {this.model.clicks+=1;}, false)
+        this.shadow_el.append(this.container)
     }
 }
 

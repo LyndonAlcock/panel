@@ -64,6 +64,7 @@ __all__ = (
     "Alert",
     "Audio",
     "Bokeh",
+    "ChartJS"
     "DataFrame",
     "DeckGL",
     "ECharts",
